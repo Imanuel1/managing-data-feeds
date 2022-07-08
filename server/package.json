@@ -1,0 +1,11 @@
+{
+  "name": "managing_data_feeds",
+  "version": "1.0.0",
+  "description": "system for managing data feeds input from external sources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AI",
+  "license": "ISC"
+}
