@@ -8,7 +8,7 @@ const ORM = new Sequelize(
   {
     host: SQL_CONFIG.host,
     dialect: SQL_CONFIG.dialect,
-    logging: (msg) => console.error(msg),
+    logging: (msg) => console.log(msg),
     define: {
       paranoid: false, // for possible future use. Note: can create problem to onDelete option
     },
@@ -20,7 +20,7 @@ export const testDBConnection = async () => {
     await ORM.authenticate();
     console.log("Connection has been established successfully.");
 
-    await ORM.sync();
+    await ORM.sync({alter: true});
     console.warn("DB is synced!");
   } catch (error) {
     console.error(error);
