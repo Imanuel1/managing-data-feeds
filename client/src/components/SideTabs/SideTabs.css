@@ -1,0 +1,12 @@
+.tabs-holder{
+    min-width: 100px;
+    max-width: 300px;
+    width: 20%;
+}
+
+.tabs-holder > h5 {
+    background-color: rgb(205, 214, 221);
+    margin: 0;
+    border-bottom: 4px solid rgb(244, 244, 244);
+    padding: 5px;
+}

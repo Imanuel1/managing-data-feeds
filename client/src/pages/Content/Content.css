@@ -1,0 +1,32 @@
+.p-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 244, 244);
+}
+
+.content-body{
+    display: flex;
+    overflow: auto;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-header > div {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.content-header > div > h3{
+    padding-right: 30px;
+    min-width: 100px;
+    max-width: 300px;
+    width: 15vw;
+}
+.content-header > div > button:not(:first-child){
+    padding-left: 20px;
+}

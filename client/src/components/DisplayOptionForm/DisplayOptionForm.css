@@ -1,0 +1,17 @@
+.c-display-options > div {
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+.c-display-options > div > p:first-child{
+    padding-right: 20px;
+}
+.c-display-options > div > p:not(:first-child){
+    padding: 10px;
+}
+.c-display-options > div > div{
+    height: 40px;
+}
+.c-display-options > div > div > input{
+    padding: 0px;
+}
