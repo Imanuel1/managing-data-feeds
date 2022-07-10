@@ -1,15 +1,15 @@
-import column from "./Column";
-import displayOption from "./DisplayOption";
+import Column from "./Column";
+import DisplayOption from "./DisplayOption";
 
 export const setupRelations = () => {
-    displayOption.hasMany(column, {
+    DisplayOption.hasMany(Column, {
       as: "column",
       sourceKey: "id",
-      foreignKey: "apiId",
+      foreignKey: "data_feed_id",
     });
-    column.belongsTo(displayOption, {
-      as: "api",
-      foreignKey: "apiId",
+    Column.belongsTo(DisplayOption, {
+      as: "displayOption",
+      foreignKey: "data_feed_id",
       targetKey: "id",
     });
 }

@@ -20,7 +20,7 @@ export const testDBConnection = async () => {
     await ORM.authenticate();
     console.log("Connection has been established successfully.");
 
-    await ORM.sync({alter: true});
+    await ORM.sync();
     console.warn("DB is synced!");
   } catch (error) {
     console.error(error);

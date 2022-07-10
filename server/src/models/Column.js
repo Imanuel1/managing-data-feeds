@@ -1,9 +1,9 @@
 import { DataTypes } from "sequelize";
-import ORM from "@ORM";
+import ORM from "../ORM";
 
 const TABLE_NAME = "column";
 
-export const column = ORM.define(
+export const Column = ORM.define(
   TABLE_NAME,
   {
     id: { type: DataTypes.INTEGER, primaryKey: true },
@@ -17,4 +17,4 @@ export const column = ORM.define(
   { tableName: TABLE_NAME }
 );
 
-export default column;
+export default Column;
