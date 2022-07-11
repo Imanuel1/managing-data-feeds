@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DisplayOptionForm from '../DisplayOptionForm/DisplayOptionForm';
 import './SideTabs.css'
 
-export default function SideTabs({ feed, onUpdateFeed}) {
+export default function SideTabs({ feed, onUpdateFeed ,scope ,setScope}) {
     const [open, setOpen] = useState(null)
     const displayOptionClicked = (e) => {
         if (open === e.currentTarget.id){
@@ -16,7 +16,7 @@ export default function SideTabs({ feed, onUpdateFeed}) {
             <h5 id="new-feed">NEW FEED</h5>
             <h5 id="display-option" onClick={displayOptionClicked}>DISPLAY OPTIONS</h5>
             {
-                open === "display-option" && <DisplayOptionForm feed={feed} onUpdateFeed={onUpdateFeed} />
+                open === "display-option" && <DisplayOptionForm feed={feed} onUpdateFeed={onUpdateFeed} scope={scope} setScope={setScope}/>
             }
             <h5 id="preview">PREVIEW</h5>
             <h5 id="columns">COLUMNS</h5>

@@ -5,8 +5,14 @@ import { FormControl, NativeSelect } from '@mui/material';
 
 const ariaLabel = { 'aria-label': 'description' };
 
-export default function DisplayOptionForm({ feed ,onUpdateFeed }) {
+export default function DisplayOptionForm({ feed ,onUpdateFeed ,scope ,setScope }) {
     console.log("feed", feed);
+
+    const handleChange = (e, index) => {
+        const tempScope = [... scope];
+        tempScope[index] = e.target.value;
+        setScope(tempScope);
+    }
     return (
         <div className="c-display-options">
             <div>
@@ -29,13 +35,13 @@ export default function DisplayOptionForm({ feed ,onUpdateFeed }) {
             </div>
             <div>
                 <p>Refresh</p>
-                <Input placeholder="number in ms" inputProps={ariaLabel} value={feed?.refresh} onChange={(e) =>onUpdateFeed("refresh", e.target.value)}/>
+                <Input placeholder="number in ms" inputProps={ariaLabel} type="number" value={feed?.refresh} onChange={(e) =>onUpdateFeed("refresh", e.target.value)}/>
             </div>
             <div>
                 <p>Ristrict scope:</p>
-                <Input defaultValue={1} inputProps={ariaLabel} />
+                <Input inputProps={ariaLabel} type="number" value={scope[0]} onChange={(e) => handleChange(e,0)}/>
                 <p> To </p>
-                <Input defaultValue={15} inputProps={ariaLabel} />
+                <Input inputProps={ariaLabel} type="number" value={scope[1]} onChange={(e) => handleChange(e,1)}/>
             </div>
         </div>
     )

@@ -1,9 +1,9 @@
 import express from "express";
-import { apisRouter } from './routers/apisRouter'
+import { columnsRouter } from "./routers/columnsRouter";
 import { displayOptionsRouter } from "./routers/displayOptionsRouter";
 
 const router = express.Router();
 
-router.use(apisRouter).use(displayOptionsRouter);
+router.use(columnsRouter).use(displayOptionsRouter);
 
 export default router;
