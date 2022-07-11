@@ -93,7 +93,7 @@ export default function Content() {
                 </div>
             </div>
             <div className="content-body">
-                <SideTabs feed={updateFeed} onUpdateFeed={onUpdateFeed} />
+                <SideTabs scope={scope} setScope={setScope} feed={updateFeed} onUpdateFeed={onUpdateFeed} />
                 <ApiTable url={displayOptions?.[currentFeed]?.url} refresh={displayOptions?.[currentFeed].refresh} scope={scope}/>
             </div>
         </div>
