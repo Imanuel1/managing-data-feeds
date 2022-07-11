@@ -1,2 +1,2 @@
-export * from "./apisService";
+export * from "./columnsService";
 export * from "./displayOptionsService";

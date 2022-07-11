@@ -1,2 +1,2 @@
-export * from './apisController';
+export * from './columnsController';
 export * from './displayOptionsController';
