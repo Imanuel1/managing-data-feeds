@@ -5,6 +5,7 @@ import { PORT } from './environment'
 import { errorHandler } from './middlewares/error-handler';
 import { requestLog } from './middlewares/requestLog';
 import router from './router';
+import { setupRelations } from './models/relations';
 
 const app = express();
 
@@ -18,4 +19,5 @@ app.use(cors())
     .listen(PORT, () => {
         console.log(`listening to port ${PORT}`)
         testDBConnection()
+        setupRelations()
     });
